@@ -1,0 +1,372 @@
+.hall_name {
+/*width: 559px;*/
+height: 35px;
+line-height: 35px;
+text-align: center;
+margin: 12px auto 25px;
+font-size: 14px;
+color: #333;
+background: url('images/screen.gif') no-repeat center;
+}
+
+.seat-row{
+/*text-align:center;
+height: 30px;*/
+height: 36px;
+
+}
+.marginBotton{
+	margin-bottom: 20px;
+}
+.hall-modal{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(00,00,00,0.5);
+	width: 100%;
+	height: 100%;
+}
+.hall-modal .hall-content{
+	background: #fff;
+	border: 1px solid #000;
+	font-size: 20px;
+	padding: 20px 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.hall-modal .hall-content div{
+	margin-bottom: 20px;
+}
+.hall-modal .hall-content input{
+	border: 1px solid #ccc;
+}
+
+.label-name{
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+}
+.sel-hall{
+	width:300px;
+	line-height:30px;
+	height:30px
+}
+.hall-input{
+	position:absolute;
+	width:280px;
+	height:26px;
+	left:1px;
+	top:1px;
+	border:0px;
+}
+.col-selector,.row-selector{
+	position: relative;
+}
+
+.seat-administration div{
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.edit-hall{
+	display:none;
+}
+
+
+.inputSeat{
+   	font: 14px 'Fjalla One', arial;
+    height: 30px;
+    width: 31px;
+    border: 1px solid #000;
+    display: inline-block;
+    zoom: 1;
+    margin: 0 2px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.must-show{
+display:block !important;
+}
+
+
+.blank-row{
+padding-bottom:5px;
+/*text-align:right;*/
+/*text-align:center;*/
+}
+
+.row-selector, .row-deselector, .col-selector, .col-deselector, .seat-all-toggle, .seat-all-toggled{
+font:14px 'Fjalla One', arial;
+height:30px;
+width:31px;
+border:1px solid #000;
+background:gray;
+color:#fff;
+display:inline-block;
+*display: inline;
+zoom: 1;
+margin:0 2px;
+/*padding:5px;*/
+text-align:center;
+line-height:30px;
+}
+
+.row-selector,.row-deselector{
+/*float:left;*/
+/*height: 20px;*/
+height: 30px;
+width: 31px;
+}
+
+.seat-row .row-deselector{
+    /*margin-left: -1px*/
+}
+
+
+.seatc{
+font:14px 'Fjalla One', arial;
+/*min-height:30px;*/
+/*width:30px;*/
+/*border:1px solid gray;*/
+display:inline-block;
+*display: inline;
+zoom: 1;
+margin:0 2px;
+padding:5px;
+vertical-align: middle;
+cursor:pointer;
+}
+
+.seat{
+    font:14px 'Fjalla One', arial;
+    /*min-height:30px;*/
+    height: 20px;
+    width:21px;
+    /*border:1px solid gray;*/
+    display:inline-block;
+    *display: inline;
+    zoom: 1;
+    /*margin:0 2px;*/
+    margin:0 7px;
+    padding:5px;
+    vertical-align: middle;
+    cursor:pointer;
+    background: url(seat.png) 0px -40px no-repeat;
+}
+
+.deselected{
+    font: 14px 'Fjalla One', arial;
+    /* min-height: 30px; */
+    width: 21px;
+    /* border: 1px solid gray; */
+    display: inline-block;
+    zoom: 1;
+    /* margin: 0 2px; */
+    margin: 0 7px;
+    padding: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.seat input{
+display:none;
+}
+
+.selected{
+    width: 21px;
+    height: 20px;
+    background-image: url('seat.png');
+    background-position: 0px -138px !important;
+    background-repeat: no-repeat;
+    /*background:url('images/correct.png') no-repeat center center;*/
+}
+
+ .selectable .seat{
+    /*width: 21px;
+    height: 20px;*/
+    /*border:1px solid #0c70a5;*/
+    /*background-color:red;*/
+}
+
+ .deselectable .seat{
+/*border:1px solid #0c70a5;
+background-color:gold;*/
+}
+
+.seat:hover, .seat-hovered, .all-hovered .seat{
+    /*background-image: url('images/seat.gif');*/
+    /*background-position: 0px -80px !important;*/
+    /*background-repeat: no-repeat;*/
+/*background-color:gold !important;*/
+}
+
+.selected:hover{
+/*    background-image: url('seat.png');
+    background-position: 0px -138px !important;
+    background-repeat: no-repeat;*/
+/*border:1px solid #000;
+background-color:gold;*/
+}
+
+.seat-input{
+width:100%;
+overflow:hidden;
+bottom:0;
+position:fixed;
+border-top:1px solid gray;
+background:#eee;
+}
+
+.seat-grid{
+/* border:1px solid gray; */
+/*text-align: center;*/
+margin:0 auto;
+}
+
+.seat-spacer{
+height:150px;
+}
+
+.seat-option-set{
+float:left;
+padding:5px 0 5px 0;
+width:32%;
+margin-left:10px;
+}
+
+.seat-option-set p{
+margin:0 0 5px 0;
+padding:0;
+}
+
+.seat-option-set b{
+font:14px 'Fjalla One', arial;
+}
+
+.seat-option-set input[type="text"], .seat-option-set select, .floating-box  input[type="text"], .floating-box  select{
+border:1px solid gray;
+padding:5px;
+font:11px tahoma;
+width:40px;
+}
+
+.seat-option-set input[type="button"], .floating-box input[type="button"], input[onclick="book_tickets()"]{
+padding:3px 10px;
+margin:0;
+border:0;
+background:#000;
+color:#fff;
+cursor:pointer;
+font:14px 'Fjalla One', arial;
+}
+
+.seat-option-set input[type="button"]:hover, .floating-box input[type="button"]:hover, input[onclick="book_tickets()"]:hover{
+background:red;
+}
+
+.seat-marker-div{
+float:left;
+margin-right:5px;
+}
+
+#seat-marker{
+    /*width:90px;*/
+}
+
+/* seat classes */
+
+
+
+.no-seats,.seat-available,.seat-disabled,.seat-booked{
+    /*display: inline-block;*/
+    width: 22px;
+    height: 20px;
+    background-image: url('seat.png');
+    margin: 0px 6px 0px 7px;
+    cursor: default;
+}
+
+.no-seats{
+/*border:1px solid #fff;*/
+background-position: 0px -100px;
+/*background-color:#fff;*/
+}
+
+.seat-available{
+    background-position: 0px -40px;
+    background-repeat: no-repeat;
+/*border:1px solid #008206;
+background-color:#93e100;*/
+}
+
+.seat-disabled{
+background-position: 0px 0px;
+background-repeat: no-repeat;
+/*border:1px solid silver;
+background-color:#eee;*/
+}
+
+.seat-booked{
+/*border:1px solid red;*/
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+/*background-color:red;*/
+}
+.seat-pre-booked{
+	background-position: 0px -80px;
+	background-repeat: no-repeat;
+}
+.seat-label{
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow:hidden ;
+    text-align: center;
+}
+
+.seat-label span{
+    position: relative;
+    display: inline-block;
+    /*float: left;*/
+    height: 20px;
+    line-height: 20px;
+    padding-left: 30px;
+    margin: 12px 14px 0;
+    background-image: url('seat.png');
+}
+
+.noseats{
+    background-position: 0px -100px;
+    background-repeat: no-repeat;
+}
+.seatavailable{
+    background-position: 0px -40px;
+    background-repeat: no-repeat;
+}
+
+.seatselected{
+    background-position: 0px -138px;
+    background-repeat: no-repeat;
+}
+
+.seatdisabled{
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+.seatbooked{
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+}
+.seatprebooked{
+    background-position: 0px -80px;
+    background-repeat: no-repeat;
+}
+
+
